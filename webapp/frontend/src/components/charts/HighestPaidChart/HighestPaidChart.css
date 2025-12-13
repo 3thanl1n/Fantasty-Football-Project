@@ -1,0 +1,362 @@
+.highest-paid-container {
+  background: white;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.highest-paid-container .chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.highest-paid-container .chart-title h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 0.25rem 0;
+}
+
+.highest-paid-container .chart-title p {
+  color: #64748b;
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+.highest-paid-container .chart-controls {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.highest-paid-container .position-filter {
+  padding: 0.5rem 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  color: #1e293b;
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.highest-paid-container .position-filter:hover {
+  border-color: #667eea;
+}
+
+.highest-paid-container .view-toggles {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.highest-paid-container .view-btn {
+  padding: 0.5rem 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  background: white;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: #64748b;
+}
+
+.highest-paid-container .view-btn:hover {
+  border-color: #667eea;
+  color: #667eea;
+}
+
+.highest-paid-container .view-btn.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-color: transparent;
+  color: white;
+}
+
+.highest-paid-container .stats-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.highest-paid-container .stat-card {
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  transition: all 0.2s;
+}
+
+.highest-paid-container .stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.highest-paid-container .stat-card.highlight {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+}
+
+.highest-paid-container .stat-icon {
+  font-size: 1.5rem;
+}
+
+.highest-paid-container .stat-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.highest-paid-container .stat-label {
+  font-size: 0.75rem;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.highest-paid-container .stat-value {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.highest-paid-container .stat-sub {
+  font-size: 0.875rem;
+  color: #22c55e;
+  font-weight: 600;
+}
+
+.highest-paid-container .chart-content {
+  min-height: 400px;
+}
+
+.highest-paid-container .bar-chart-wrapper {
+  overflow-y: auto;
+  max-height: 600px;
+}
+
+.highest-paid-tooltip {
+  background: white;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  border: 1px solid #e2e8f0;
+  min-width: 200px;
+}
+
+.highest-paid-tooltip h4 {
+  margin: 0 0 0.75rem 0;
+  font-size: 1rem;
+  color: #1e293b;
+  font-weight: 600;
+}
+
+.highest-paid-tooltip .tooltip-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.highest-paid-tooltip .tooltip-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.highest-paid-tooltip .label {
+  color: #64748b;
+  font-size: 0.875rem;
+}
+
+.highest-paid-tooltip .value {
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.highest-paid-tooltip .position-badge {
+  padding: 0.125rem 0.5rem;
+  border-radius: 4px;
+  color: white;
+  font-size: 0.75rem;
+}
+
+.highest-paid-tooltip .salary {
+  color: #22c55e;
+  font-size: 1rem;
+}
+
+.highest-paid-container .breakdown-view {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+@media (max-width: 768px) {
+  .highest-paid-container .breakdown-view {
+    grid-template-columns: 1fr;
+  }
+}
+
+.highest-paid-container .position-breakdown-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.highest-paid-container .position-breakdown-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background: #f8fafc;
+  border-radius: 10px;
+  transition: all 0.2s;
+}
+
+.highest-paid-container .position-breakdown-item:hover {
+  background: #f1f5f9;
+  transform: translateX(4px);
+}
+
+.highest-paid-container .position-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.highest-paid-container .position-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.highest-paid-container .position-name {
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.highest-paid-container .position-stats {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.highest-paid-container .player-count {
+  font-size: 0.75rem;
+  color: #64748b;
+  background: #e2e8f0;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
+.highest-paid-container .avg-salary {
+  font-size: 0.875rem;
+  color: #64748b;
+}
+
+.highest-paid-container .total-salary {
+  font-weight: 700;
+  color: #22c55e;
+}
+
+.highest-paid-container .player-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+  max-height: 600px;
+  overflow-y: auto;
+  padding: 0.5rem;
+}
+
+.highest-paid-container .player-card {
+  position: relative;
+  background: white;
+  border-radius: 12px;
+  padding: 1rem;
+  border: 2px solid #e2e8f0;
+  transition: all 0.3s;
+  overflow: hidden;
+}
+
+.highest-paid-container .player-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  border-color: var(--accent-color);
+}
+
+.highest-paid-container .player-card.top-three {
+  border-color: #fbbf24;
+  background: linear-gradient(135deg, #fffbeb 0%, white 50%);
+}
+
+.highest-paid-container .card-rank {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #94a3b8;
+}
+
+.highest-paid-container .player-card.top-three .card-rank {
+  color: #f59e0b;
+}
+
+.highest-paid-container .card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.highest-paid-container .player-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0;
+  padding-right: 2rem;
+}
+
+.highest-paid-container .player-position {
+  display: inline-block;
+  width: fit-content;
+  padding: 0.25rem 0.75rem;
+  border-radius: 6px;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.highest-paid-container .player-salary {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #22c55e;
+  margin-top: 0.25rem;
+}
+
+.highest-paid-container .card-accent {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--accent-color);
+}
+
+.highest-paid-container .chart-legend {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: #f8fafc;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.highest-paid-container .chart-legend p {
+  margin: 0;
+  color: #64748b;
+  font-size: 0.875rem;
+}

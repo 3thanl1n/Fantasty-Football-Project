@@ -1,0 +1,90 @@
+# Python
+/.venv
+/venv
+env/
+ENV/
+*.py[cod]
+*$py.class
+*.so
+.Python
+__pycache__/
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Node.js (matches node_modules at any level)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnp
+.pnp.js
+
+# Environment variables (matches .env at any level)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env*.local
+
+# Build outputs
+/build
+/dist
+/.next
+/out
+
+# Testing
+/coverage
+.nyc_output
+*.lcov
+
+# Logs
+*.log
+logs/
+*.log.*
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+*.sublime-project
+*.sublime-workspace
+
+# Secrets and sensitive data
+/secret/
+*.pem
+*.key
+*.crt
+*.p12
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+.temp/
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb_checkpoints/

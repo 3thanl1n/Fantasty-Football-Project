@@ -1,0 +1,400 @@
+.ct-container {
+  background: white;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.chart-title h2 {
+  margin: 0 0 0.25rem 0;
+  font-size: 1.5rem;
+  color: #1e293b;
+}
+
+.chart-title p {
+  margin: 0;
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+.chart-controls {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.filter-select {
+  padding: 0.5rem 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  color: #1e293b;
+  background: white;
+  cursor: pointer;
+}
+
+.view-toggles {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.view-btn {
+  padding: 0.5rem 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: white;
+  color: #64748b;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.view-btn:hover {
+  background: #f8fafc;
+}
+
+.view-btn.active {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border-color: transparent;
+}
+
+.stats-strip {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.stat-card {
+  flex: 1;
+  min-width: 140px;
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.stat-card.best {
+  background: linear-gradient(135deg, #dcfce7, #bbf7d0);
+}
+
+.stat-icon {
+  font-size: 1.5rem;
+}
+
+.stat-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.stat-value {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.stat-value.positive {
+  color: #22c55e;
+}
+
+.stat-sub {
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+.stat-sub.positive {
+  color: #22c55e;
+}
+
+.chart-content {
+  margin-bottom: 1.5rem;
+}
+
+.trajectory-chart {
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.ct-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.ct-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.25rem;
+  position: relative;
+  transition: all 0.2s;
+}
+
+.ct-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.ct-card.changed-teams {
+  border-left: 4px solid #667eea;
+}
+
+.ct-card.same-team {
+  border-left: 4px solid #22c55e;
+}
+
+.rank-badge {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  background: #f1f5f9;
+  color: #64748b;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+}
+
+.improvement-badge {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.35rem 0.75rem;
+  border-radius: 8px;
+}
+
+.ct-card .player-name {
+  margin: 1.5rem 0 0.5rem 0;
+  font-size: 1.1rem;
+  color: #1e293b;
+}
+
+.team-info {
+  margin-bottom: 1rem;
+}
+
+.team-change {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.team-change .team {
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  background: #f1f5f9;
+  color: #64748b;
+}
+
+.team-change .team.current {
+  background: #e0e7ff;
+  color: #4f46e5;
+}
+
+.team-change .arrow {
+  color: #94a3b8;
+}
+
+.same-team-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: #dcfce7;
+  color: #16a34a;
+  font-size: 0.85rem;
+  border-radius: 6px;
+}
+
+.ppg-comparison {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.75rem;
+}
+
+.ppg-item {
+  flex: 1;
+  text-align: center;
+  padding: 0.75rem;
+  border-radius: 8px;
+  background: #f8fafc;
+}
+
+.ppg-item.current {
+  background: #dcfce7;
+}
+
+.ppg-item .label {
+  display: block;
+  font-size: 0.7rem;
+  color: #64748b;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+}
+
+.ppg-item .value {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.ppg-item.current .value {
+  color: #16a34a;
+}
+
+.yards-change {
+  margin-top: 0.75rem;
+  text-align: center;
+  font-size: 0.85rem;
+  padding: 0.5rem;
+  border-radius: 6px;
+}
+
+.yards-change.positive {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.yards-change.negative {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.improvement-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem;
+  background: #f8fafc;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.legend-title {
+  font-weight: 600;
+  color: #64748b;
+  font-size: 0.85rem;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+.legend-item .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.chart-footer {
+  text-align: center;
+  padding-top: 1rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.chart-footer p {
+  margin: 0;
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+.ct-tooltip {
+  background: white;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  min-width: 200px;
+}
+
+.ct-tooltip h4 {
+  margin: 0 0 0.75rem 0;
+  color: #1e293b;
+  font-size: 1rem;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 0.5rem;
+}
+
+.tooltip-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.tooltip-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.tooltip-row .label {
+  color: #64748b;
+  font-size: 0.85rem;
+}
+
+.tooltip-row .value {
+  font-weight: 600;
+  color: #1e293b;
+  font-size: 0.85rem;
+}
+
+.tooltip-row .value.positive {
+  color: #22c55e;
+}
+
+.tooltip-row .value.negative {
+  color: #ef4444;
+}
+
+.tooltip-row .value.changed {
+  color: #667eea;
+}
+
+.tooltip-row.highlight {
+  padding-top: 0.5rem;
+  border-top: 1px dashed #e2e8f0;
+}
+
+@media (max-width: 768px) {
+  .chart-header {
+    flex-direction: column;
+  }
+  
+  .stats-strip {
+    flex-direction: column;
+  }
+  
+  .stat-card {
+    min-width: 100%;
+  }
+  
+  .ct-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,361 @@
+.tp-container {
+  background: white;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.tp-container .chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.tp-container .chart-title h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 0.25rem 0;
+}
+
+.tp-container .chart-title p {
+  color: #64748b;
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+.tp-container .chart-controls {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.tp-container .filter-select {
+  padding: 0.5rem 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  background: white;
+  cursor: pointer;
+}
+
+.tp-container .view-toggles {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.tp-container .view-btn {
+  padding: 0.5rem 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  background: white;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: #64748b;
+}
+
+.tp-container .view-btn:hover {
+  border-color: #667eea;
+  color: #667eea;
+}
+
+.tp-container .view-btn.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-color: transparent;
+  color: white;
+}
+
+.tp-container .stats-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.tp-container .stat-card {
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  transition: all 0.2s;
+}
+
+.tp-container .stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.tp-container .stat-card.best {
+  background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);
+}
+
+.tp-container .stat-card.worst {
+  background: linear-gradient(135deg, #fef2f2 0%, #fecaca 100%);
+}
+
+.tp-container .stat-icon {
+  font-size: 1.5rem;
+}
+
+.tp-container .stat-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.tp-container .stat-label {
+  font-size: 0.75rem;
+  color: #64748b;
+  text-transform: uppercase;
+}
+
+.tp-container .stat-value {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.tp-container .stat-value.positive {
+  color: #22c55e;
+}
+
+.tp-container .stat-value.negative {
+  color: #ef4444;
+}
+
+.tp-container .stat-sub {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.tp-container .stat-sub.positive {
+  color: #22c55e;
+}
+
+.tp-container .stat-sub.negative {
+  color: #ef4444;
+}
+
+.tp-tooltip {
+  background: white;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  border: 1px solid #e2e8f0;
+}
+
+.tp-tooltip h4 {
+  margin: 0 0 0.75rem 0;
+  font-size: 1rem;
+  color: #1e293b;
+}
+
+.tp-tooltip .tooltip-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.tp-tooltip .tooltip-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.tp-tooltip .tooltip-row.highlight {
+  padding-top: 0.5rem;
+  border-top: 1px solid #e2e8f0;
+  margin-top: 0.25rem;
+}
+
+.tp-tooltip .label {
+  color: #64748b;
+}
+
+.tp-tooltip .value {
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.tp-tooltip .value.positive {
+  color: #22c55e;
+}
+
+.tp-tooltip .value.negative {
+  color: #ef4444;
+}
+
+.tp-container .chart-content {
+  min-height: 400px;
+}
+
+.tp-container .impact-chart,
+.tp-container .comparison-chart {
+  overflow-y: auto;
+  max-height: 600px;
+}
+
+.tp-container .chart-legend-row {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.tp-container .legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: #64748b;
+}
+
+.tp-container .legend-item .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.tp-container .tp-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem;
+  max-height: 600px;
+  overflow-y: auto;
+  padding: 0.25rem;
+}
+
+.tp-container .tp-card {
+  position: relative;
+  background: white;
+  border-radius: 12px;
+  padding: 1rem;
+  border: 2px solid #e2e8f0;
+  transition: all 0.3s;
+}
+
+.tp-container .tp-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.tp-container .tp-card.improved {
+  border-left: 4px solid #22c55e;
+}
+
+.tp-container .tp-card.declined {
+  border-left: 4px solid #ef4444;
+}
+
+.tp-container .change-badge {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.tp-container .tp-card .player-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0 0 0.5rem 0;
+  padding-right: 3rem;
+}
+
+.tp-container .trade-flow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.875rem;
+}
+
+.tp-container .trade-flow .team {
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.tp-container .trade-flow .team.from {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.tp-container .trade-flow .team.to {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.tp-container .trade-flow .arrow {
+  color: #94a3b8;
+}
+
+.tp-container .ppg-comparison {
+  display: flex;
+  gap: 1rem;
+}
+
+.tp-container .ppg-item {
+  flex: 1;
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: 6px;
+}
+
+.tp-container .ppg-item.before {
+  background: #f1f5f9;
+}
+
+.tp-container .ppg-item.after {
+  background: #eef2ff;
+}
+
+.tp-container .ppg-item .label {
+  display: block;
+  font-size: 0.625rem;
+  color: #64748b;
+  text-transform: uppercase;
+}
+
+.tp-container .ppg-item .value {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.tp-container .performance-legend {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background: #f8fafc;
+  border-radius: 8px;
+  flex-wrap: wrap;
+}
+
+.tp-container .legend-title {
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.tp-container .chart-footer {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.tp-container .chart-footer p {
+  margin: 0;
+  color: #64748b;
+  font-size: 0.875rem;
+}

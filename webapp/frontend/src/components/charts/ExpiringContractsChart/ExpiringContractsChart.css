@@ -1,0 +1,265 @@
+.expiring-contracts-container {
+  background: white;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.expiring-contracts-container .chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.expiring-contracts-container .chart-title h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 0.25rem 0;
+}
+
+.expiring-contracts-container .chart-title p {
+  color: #64748b;
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+.expiring-contracts-container .chart-controls {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.expiring-contracts-container .year-filter {
+  padding: 0.5rem 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  background: white;
+  cursor: pointer;
+}
+
+.expiring-contracts-container .view-toggles {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.expiring-contracts-container .view-btn {
+  padding: 0.5rem 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  background: white;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: #64748b;
+}
+
+.expiring-contracts-container .view-btn:hover {
+  border-color: #667eea;
+  color: #667eea;
+}
+
+.expiring-contracts-container .view-btn.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-color: transparent;
+  color: white;
+}
+
+.expiring-contracts-container .stats-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.expiring-contracts-container .stat-card {
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  transition: all 0.2s;
+}
+
+.expiring-contracts-container .stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.expiring-contracts-container .stat-card.highlight {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+}
+
+.expiring-contracts-container .stat-icon {
+  font-size: 1.5rem;
+}
+
+.expiring-contracts-container .stat-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.expiring-contracts-container .stat-label {
+  font-size: 0.75rem;
+  color: #64748b;
+  text-transform: uppercase;
+}
+
+.expiring-contracts-container .stat-value {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.expiring-contracts-container .stat-sub {
+  font-size: 0.875rem;
+  color: #22c55e;
+  font-weight: 600;
+}
+
+.expiring-tooltip {
+  background: white;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  border: 1px solid #e2e8f0;
+}
+
+.expiring-tooltip h4 {
+  margin: 0 0 0.75rem 0;
+  font-size: 1rem;
+  color: #1e293b;
+}
+
+.expiring-tooltip .tooltip-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.expiring-tooltip .tooltip-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.expiring-tooltip .label {
+  color: #64748b;
+  font-size: 0.875rem;
+}
+
+.expiring-tooltip .value {
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.expiring-tooltip .value.salary {
+  color: #22c55e;
+}
+
+.expiring-contracts-container .chart-content {
+  min-height: 400px;
+}
+
+.expiring-contracts-container .chart-legend-row {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.expiring-contracts-container .legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: #64748b;
+}
+
+.expiring-contracts-container .legend-item .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.expiring-contracts-container .expiring-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+  max-height: 500px;
+  overflow-y: auto;
+  padding: 0.25rem;
+}
+
+.expiring-contracts-container .expiring-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1rem;
+  border: 2px solid #e2e8f0;
+  transition: all 0.3s;
+}
+
+.expiring-contracts-container .expiring-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  border-color: var(--accent-color);
+}
+
+.expiring-contracts-container .card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.expiring-contracts-container .player-position {
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.expiring-contracts-container .expire-badge {
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+.expiring-contracts-container .expiring-card .player-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0 0 0.25rem 0;
+}
+
+.expiring-contracts-container .player-team {
+  font-size: 0.875rem;
+  color: #64748b;
+  margin-bottom: 0.5rem;
+}
+
+.expiring-contracts-container .player-salary {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #22c55e;
+}
+
+.expiring-contracts-container .chart-footer {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: #f8fafc;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.expiring-contracts-container .chart-footer p {
+  margin: 0;
+  color: #64748b;
+  font-size: 0.875rem;
+}

@@ -1,0 +1,342 @@
+.efficiency-chart-container {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.efficiency-chart-container .chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.efficiency-chart-container .chart-title h2 {
+  font-size: 1.75rem;
+  color: #1e293b;
+  margin: 0 0 0.25rem 0;
+}
+
+.efficiency-chart-container .chart-title p {
+  color: #64748b;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.efficiency-chart-container .chart-controls {
+  display: flex;
+  gap: 0.5rem;
+  background: #f1f5f9;
+  padding: 0.25rem;
+  border-radius: 12px;
+  flex-wrap: wrap;
+}
+
+.efficiency-chart-container .chart-btn {
+  padding: 0.6rem 1rem;
+  border: none;
+  background: transparent;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #64748b;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.efficiency-chart-container .chart-btn:hover {
+  color: #667eea;
+  background: rgba(102, 126, 234, 0.1);
+}
+
+.efficiency-chart-container .chart-btn.active {
+  background: white;
+  color: #667eea;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Top Teams Strip */
+.top-teams-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.top-team-card {
+  position: relative;
+  padding: 0.75rem 1rem;
+  background: linear-gradient(135deg, #fafbfc 0%, #f1f5f9 100%);
+  border-radius: 10px;
+  border-left: 4px solid #667eea;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.top-team-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.top-team-card.champion {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  border-left-color: #f59e0b;
+}
+
+.top-team-card.champion::after {
+  content: '👑';
+  position: absolute;
+  top: -5px;
+  right: 5px;
+  font-size: 1.2rem;
+  animation: bounce 1s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+.team-rank {
+  position: absolute;
+  top: 5px;
+  right: 8px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #94a3b8;
+}
+
+.team-info {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+
+.top-team-card .team-name {
+  font-weight: 700;
+  color: #1e293b;
+  font-size: 0.95rem;
+}
+
+.team-record {
+  font-size: 0.8rem;
+  color: #64748b;
+  font-weight: 600;
+}
+
+.team-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  border-radius: 0 3px 0 0;
+  transition: width 0.5s ease;
+}
+
+/* Chart Wrapper */
+.efficiency-chart-container .chart-wrapper {
+  background: #fafbfc;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Custom Tooltip */
+.efficiency-tooltip {
+  background: white;
+  border: none;
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.18);
+  min-width: 200px;
+  animation: tooltipPop 0.2s ease-out;
+}
+
+@keyframes tooltipPop {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.efficiency-tooltip h4 {
+  margin: 0 0 0.75rem 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #f1f5f9;
+  color: #1e293b;
+  font-size: 1rem;
+}
+
+.tooltip-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.tooltip-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.tooltip-item .label {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.tooltip-item .value {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.tooltip-item.highlight {
+  grid-column: span 2;
+  background: #f8fafc;
+  padding: 0.5rem;
+  border-radius: 6px;
+  margin-top: 0.25rem;
+}
+
+.tooltip-item .value.positive {
+  color: #22c55e;
+}
+
+.tooltip-item .value.negative {
+  color: #ef4444;
+}
+
+/* Insights */
+.efficiency-insights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.efficiency-insights .insight-card {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.efficiency-insights .insight-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.efficiency-insights .insight-card.champion {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.efficiency-insights .insight-card.champion .insight-label,
+.efficiency-insights .insight-card.champion .insight-value {
+  color: white;
+}
+
+.efficiency-insights .insight-card.champion .insight-icon {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.efficiency-insights .insight-icon {
+  font-size: 1.25rem;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.efficiency-insights .insight-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.efficiency-insights .insight-label {
+  font-size: 0.75rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.efficiency-insights .insight-value {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+/* Legend Info */
+.chart-legend-info {
+  text-align: center;
+  padding-top: 1rem;
+  border-top: 1px solid #f1f5f9;
+}
+
+.chart-legend-info p {
+  margin: 0;
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .efficiency-chart-container .chart-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .top-teams-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .efficiency-insights {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .efficiency-chart-container {
+    padding: 1rem;
+  }
+
+  .top-teams-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .efficiency-insights {
+    grid-template-columns: 1fr;
+  }
+
+  .efficiency-chart-container .chart-controls {
+    width: 100%;
+    justify-content: center;
+  }
+}

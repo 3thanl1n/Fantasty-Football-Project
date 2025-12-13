@@ -1,0 +1,291 @@
+.hvt-container {
+  background: white;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.hvt-container .chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.hvt-container .chart-title h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 0.25rem 0;
+}
+
+.hvt-container .chart-title p {
+  color: #64748b;
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+.hvt-container .view-toggles {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.hvt-container .view-btn {
+  padding: 0.5rem 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  background: white;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: #64748b;
+}
+
+.hvt-container .view-btn:hover {
+  border-color: #667eea;
+  color: #667eea;
+}
+
+.hvt-container .view-btn.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-color: transparent;
+  color: white;
+}
+
+.hvt-container .stats-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.hvt-container .stat-card {
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  transition: all 0.2s;
+}
+
+.hvt-container .stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.hvt-container .stat-card.highlight {
+  background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);
+}
+
+.hvt-container .stat-icon {
+  font-size: 1.5rem;
+}
+
+.hvt-container .stat-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.hvt-container .stat-label {
+  font-size: 0.75rem;
+  color: #64748b;
+  text-transform: uppercase;
+}
+
+.hvt-container .stat-value {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.hvt-container .stat-sub {
+  font-size: 0.875rem;
+  color: #22c55e;
+  font-weight: 600;
+}
+
+.hvt-tooltip {
+  background: white;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  border: 1px solid #e2e8f0;
+}
+
+.hvt-tooltip h4 {
+  margin: 0 0 0.75rem 0;
+  font-size: 1rem;
+  color: #1e293b;
+}
+
+.hvt-tooltip .tooltip-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.hvt-tooltip .tooltip-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.hvt-tooltip .label {
+  color: #64748b;
+}
+
+.hvt-tooltip .value {
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.hvt-tooltip .value.highlight {
+  color: #22c55e;
+}
+
+.hvt-tooltip .value.score {
+  color: #667eea;
+}
+
+.hvt-container .chart-content {
+  min-height: 400px;
+}
+
+.hvt-container .value-chart {
+  overflow-y: auto;
+  max-height: 600px;
+}
+
+.hvt-container .hvt-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  max-height: 600px;
+  overflow-y: auto;
+  padding: 0.25rem;
+}
+
+.hvt-container .hvt-card {
+  position: relative;
+  background: white;
+  border-radius: 12px;
+  padding: 1rem;
+  border: 2px solid #e2e8f0;
+  transition: all 0.3s;
+  overflow: hidden;
+}
+
+.hvt-container .hvt-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  border-color: var(--value-color);
+}
+
+.hvt-container .hvt-card.top-trade {
+  background: linear-gradient(135deg, #f0fdf4 0%, white 50%);
+  border-color: #22c55e;
+}
+
+.hvt-container .card-rank {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #94a3b8;
+}
+
+.hvt-container .value-indicator {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.hvt-container .hvt-card .player-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0.5rem 0 0.25rem 0;
+  padding-right: 3rem;
+}
+
+.hvt-container .acquiring-team {
+  font-size: 0.875rem;
+  color: #667eea;
+  margin-bottom: 0.75rem;
+}
+
+.hvt-container .trade-stats {
+  display: flex;
+  gap: 1rem;
+}
+
+.hvt-container .trade-stat {
+  flex: 1;
+  text-align: center;
+  padding: 0.5rem;
+  background: #f8fafc;
+  border-radius: 6px;
+}
+
+.hvt-container .trade-stat .label {
+  display: block;
+  font-size: 0.625rem;
+  color: #64748b;
+  text-transform: uppercase;
+}
+
+.hvt-container .trade-stat .value {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.hvt-container .value-legend {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background: #f8fafc;
+  border-radius: 8px;
+  flex-wrap: wrap;
+}
+
+.hvt-container .legend-title {
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.hvt-container .legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: #64748b;
+}
+
+.hvt-container .legend-item .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.hvt-container .chart-footer {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.hvt-container .chart-footer p {
+  margin: 0;
+  color: #64748b;
+  font-size: 0.875rem;
+}
